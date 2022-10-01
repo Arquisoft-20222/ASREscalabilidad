@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'asr_db',
         'USER':'asr_user',
         'PASSWORD':'123456789ASR',
-        'HOST':'localhost',
+        'HOST':'10.128.0.2',
         'PORT':'5432'
     }
 }
