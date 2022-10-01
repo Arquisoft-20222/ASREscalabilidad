@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'asr_db',
         'USER':'asr_user',
-        'PASSWORD':'159263487',
+        'PASSWORD':'123456789ASR',
         'HOST':'localhost',
         'PORT':'5432'
     }
