@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from asr_escalabilidad.serializers import EmpleadoSerializer, EmpresaSerializer
-from asr_escalabilidad.models import Empleado, Empresa
+from asr_escalabilidad.serializers import EmpleadoSerializer, EmpresaSerializer, PagoSerializer
+from asr_escalabilidad.models import Empleado, Empresa, Pago
 
 
 class EmpleadoViewSet(viewsets.ModelViewSet):
@@ -12,3 +12,7 @@ class EmpleadoViewSet(viewsets.ModelViewSet):
 class EmpresaViewSet(viewsets.ModelViewSet):
    queryset = Empresa.objects.all()
    serializer_class = EmpresaSerializer
+
+class PagoViewSet(viewsets.ModelViewSet):
+   queryset = Pago.objects.all()
+   serializer_class = PagoSerializer

@@ -7,7 +7,6 @@ class Empresa(models.Model):
     razon_social = models.CharField(max_length=255)
     nit = models.CharField(max_length=255)
     direccion = models.CharField(max_length=255)
-    empleados = models.ManyToOneRel
 
 class Empleado(models.Model):
 
@@ -23,3 +22,9 @@ class Empleado(models.Model):
     birth_date = models.DateTimeField(auto_now_add=True)
     empresa = models.ForeignKey(Empresa, on_delete=models.DO_NOTHING, related_name='empleados')
 
+class Pago(models.Model):
+    nombre_pago = models.CharField(max_length = 255)
+    codigo = models.CharField(max_length = 255)
+    descripcion = models.CharField(max_length = 255)
+    fecha_pago = models.DateTimeField(auto_now_add=True)
+    empresa = models.ForeignKey(Empresa, on_delete=models.DO_NOTHING, related_name='pagos')
